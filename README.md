@@ -54,7 +54,7 @@ cd explainer-video-pipeline
 python tests/portable_smoke.py --workspace D:/VideoTests/NewSmokeRun
 ```
 
-The smoke test creates temporary technical fixtures and a proxy/draft; it does not use a paid generation service or import into your editor. Native playback and listening need separate checks.
+The smoke test creates temporary technical fixtures and a compatibility draft; it does not use a paid generation service or import into your editor. Native playback and listening need separate checks.
 
 ## Privacy and licensing
 

@@ -492,6 +492,11 @@
   ],
   "support_files": [
     {
+      "file": ".gitattributes",
+      "sha256": "c8814e7a7c250c35393d40f393bc3b92d4afd94d977976b5195f5649ba4d00dd",
+      "bytes": 72
+    },
+    {
       "file": ".gitignore",
       "sha256": "bce362cb35be3d0727960feef7ff8a90e1c1161400b6043f0f9b42855716ab2a",
       "bytes": 431
@@ -513,8 +518,8 @@
     },
     {
       "file": "README.md",
-      "sha256": "9d40242a1dcc6a63a8b7b6185444db9f452e478c69aa799c9f243b9f6711375a",
-      "bytes": 4945
+      "sha256": "99a7078cbc53c15571818789d11a962c86d7ffe228c2f4ff08e219618cffc068",
+      "bytes": 4953
     },
     {
       "file": "tests/test_production_policy.py",
