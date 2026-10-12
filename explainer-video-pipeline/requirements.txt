@@ -1,0 +1,6 @@
+# pyJianYingDraft 0.3.0 source is vendored under Apache-2.0.
+# Install dependencies in the current user's environment, not a shared runtime.
+Pillow>=12.3,<13
+pymediainfo>=7,<8
+imageio>=2.38,<3
+numpy>=2.3,<3

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Explainer Video Pipeline"
+  short_description: "科普与心理学讲解视频：自己的角色与画风，清晰动效、隔离队列和可编辑剪映草稿"
+  default_prompt: "使用 $explainer-video-pipeline，根据我的频道档案、文稿、配音和字幕制作或续做可编辑剪映草稿。"
+policy:
+  allow_implicit_invocation: true

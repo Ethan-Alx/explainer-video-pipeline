@@ -1,0 +1,195 @@
+{
+  "example_only": true,
+  "note": "Schema examples, not an approved or buildable production plan. Evidence and ledger paths are relative to project_identity.project_root; fallback is plan.parent. Preview declarations are human review records, not automatic visual certification.",
+  "production_policy": {
+    "version": "7.2",
+    "preset_id": "explainer_v72",
+    "channel_id": "example-channel",
+    "ordinary_still_target_s": 8,
+    "ordinary_still_review_limit_s": 10,
+    "flow_video_limit": 5,
+    "flow_paid_submission_budget": 5,
+    "motion": {
+      "minimum_scale_relative_delta": 0.2,
+      "minimum_translation_canvas_fraction": 0.08
+    },
+    "labels": {
+      "minimum_font_px_at_1080p": 40,
+      "minimum_contrast_ratio": 4.5
+    },
+    "flow_submission_ledger": "generation/flow_video_submissions.json"
+  },
+  "project_identity_example": {
+    "project_id": "psychology_EP01_topic",
+    "project_instance_id": "fresh-uuid-for-project-instance",
+    "run_id": "fresh-uuid-for-run",
+    "project_root": "D:/VideoProjects/Psychology_EP01_unique"
+  },
+  "ordinary_shot_example": {
+    "id": "S001",
+    "start_us": 0,
+    "end_us": 7000000,
+    "camera": {
+      "motion": "zoom_in",
+      "amount": 0.25,
+      "focus": [
+        0.45,
+        0.4
+      ]
+    },
+    "presentation": {
+      "kind": "scene"
+    },
+    "motion_review": {
+      "continuous_preview": "review/full_sequence_preview.mp4",
+      "reviewed": false,
+      "focus_protected": false,
+      "reason": "Optional reason for a deliberate weak-motion exception; do not copy this placeholder as a review result."
+    }
+  },
+  "mechanism_shot_example": {
+    "id": "S002",
+    "start_us": 7000000,
+    "end_us": 21000000,
+    "presentation": {
+      "kind": "mechanism",
+      "state_changes": [
+        {
+          "at_us": 4000000,
+          "description": "The first compartment appears",
+          "element_ids": [
+            "part_a"
+          ]
+        },
+        {
+          "at_us": 8000000,
+          "description": "The second compartment appears separately",
+          "element_ids": [
+            "part_b"
+          ]
+        }
+      ]
+    },
+    "motion_review": {
+      "dynamic_element_ids": [
+        "part_a",
+        "part_b"
+      ],
+      "continuous_preview": "review/full_sequence_preview.mp4",
+      "reviewed": false,
+      "focus_protected": false
+    },
+    "state_change_timing_note": "at_us is relative to shot start, and must match effective layer reveal/end/change at that time; a category name or unrelated animation at the beginning is not enough."
+  },
+  "duration_exception_example": {
+    "reason": "A specific deliberate pause or reading requirement reviewed in the surrounding sequence; do not use a generic whiteboard exemption."
+  },
+  "native_label_example": {
+    "id": "S001_allspice_label",
+    "type": "text",
+    "text": "Allspice",
+    "text_color": "#20333D",
+    "bbox_px": [
+      100,
+      200,
+      400,
+      260
+    ],
+    "start_us": 0,
+    "end_us": 7000000,
+    "readability": {
+      "background": {
+        "color": "#FFF4DD",
+        "opacity": 0.96,
+        "padding_px": 16,
+        "element_id": "S001_allspice_backing"
+      },
+      "font_px_at_1080p": 48,
+      "final_preview": "review/S001_composite_1080p.jpg",
+      "reviewed": false
+    }
+  },
+  "backing_element_example": {
+    "id": "S001_allspice_backing",
+    "type": "png",
+    "asset": "assets/labels/allspice_backing.png",
+    "bbox_px": [
+      84,
+      184,
+      416,
+      276
+    ],
+    "start_us": 0,
+    "end_us": 7000000,
+    "layer": 39,
+    "purpose": "Provide a small opaque backing for an editable native label"
+  },
+  "unbacked_label_readability_example": {
+    "font_px_at_1080p": 52,
+    "contrast_reviewed": true,
+    "contrast_ratio": 7.8,
+    "final_preview": "review/S001_composite_1080p.jpg",
+    "reviewed": false,
+    "note": "Ratio is the declared checked contrast against the actual moving placement, not merely two chosen palette colors."
+  },
+  "omitted_label_example": {
+    "omitted": true,
+    "reason": "The essential object cannot carry a legible label without blocking the action",
+    "alternative": "object_highlight",
+    "element_ids": [
+      "allspice_highlight"
+    ]
+  },
+  "flow_shot_generation_example": {
+    "provider": "flow",
+    "task_id": "actual-provider-task-id",
+    "asset_id": "actual-downloaded-asset-id"
+  },
+  "flow_ledger_example": {
+    "project_identity": {
+      "project_id": "episode_03_topic",
+      "project_instance_id": "fresh-uuid-for-project-instance"
+    },
+    "submissions": [
+      {
+        "run_id": "initial-run-uuid",
+        "task_id": "failed-provider-task-id",
+        "shot_id": "S017",
+        "provider": "flow",
+        "media_type": "video",
+        "paid": true,
+        "is_retry": false,
+        "status": "failed",
+        "major_error_code": "wrong_action",
+        "major_error_reason": "The requested action never occurs"
+      },
+      {
+        "run_id": "resume-run-uuid",
+        "task_id": "actual-provider-task-id",
+        "shot_id": "S017",
+        "asset_id": "actual-downloaded-asset-id",
+        "provider": "flow",
+        "media_type": "video",
+        "paid": true,
+        "is_retry": true,
+        "major_error_code": "wrong_action",
+        "major_error_reason": "The preceding take never performed the required action",
+        "status": "used"
+      }
+    ]
+  },
+  "major_retry_error_codes": [
+    "technical_failure",
+    "wrong_action",
+    "wrong_subject",
+    "identity_break",
+    "scientific_misrepresentation",
+    "unusable_geometry",
+    "missing_required_content"
+  ],
+  "checks": {
+    "planning": "Reject unreasoned >10s ordinary stills and over-budget submissions; weak motion and unfinished visual reviews are warnings. State exemptions require actual scheduled changes.",
+    "final": "Require existing continuous previews, declared focus review, actual backing-element mapping or contrast review, final label sizes and composite evidence, and shot/task/asset mapping for Flow videos.",
+    "limits": "File SHA and metadata checks cannot certify that an image is beautiful, an actual animation looks strong, text is readable to viewers, or the account had sufficient quota. Do not label an accepted historical draft as newly passing 7.2."
+  }
+}

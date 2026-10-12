@@ -1,0 +1,6 @@
+pyJianYingDraft 0.3.0 project-proven source snapshot.
+Upstream: https://github.com/GuanYixuan/pyJianYingDraft
+License: Apache-2.0; full license in pyJianYingDraft-LICENSE.txt.
+This distribution preserves the project-tested native writer, MediaInfo coercion and track API.
+Packaging change: removed the eager Windows JianyingController import/export from __init__.py. Native JSON authoring does not load or use GUI automation.
+Bytecode caches, environments, credentials and personal media are excluded.

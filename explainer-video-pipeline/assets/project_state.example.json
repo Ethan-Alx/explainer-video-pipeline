@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "skill_version": "7.3.0",
+  "project_id": null,
+  "title": null,
+  "quality_baseline": {
+    "id": null,
+    "status": "pending_own_reference_review",
+    "reference": "references/production-v72.md",
+    "accepted_scope": [],
+    "known_limits": [
+      "A schema does not certify visual quality",
+      "Native playback and perceptual audio require separate evidence"
+    ],
+    "production_requirements_version": "7.2"
+  },
+  "profile": {
+    "file": "channel_profile.json",
+    "sha256": null,
+    "status": "pending"
+  },
+  "source_hashes": {
+    "manuscript": {
+      "file": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    "audio": {
+      "file": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    "subtitles": {
+      "file": null,
+      "sha256": null,
+      "status": "pending"
+    }
+  },
+  "stage": "intake",
+  "active_plan": {
+    "file": null,
+    "sha256": null,
+    "status": "not_created"
+  },
+  "asset_queue": {
+    "manifest": null,
+    "planned": 0,
+    "submitted": 0,
+    "downloaded": 0,
+    "reviewed": 0,
+    "unknown_submissions": []
+  },
+  "approved_samples": [],
+  "decisions": {
+    "file": "decision_log.jsonl",
+    "last_id": null
+  },
+  "next_actions": [
+    "Read the selected channel profile and identify missing inputs",
+    "Run local environment and native compatibility checks before final production"
+  ],
+  "verification": {
+    "structure": {
+      "status": "pending",
+      "evidence": [],
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    "proxy_visual": {
+      "status": "pending",
+      "evidence": [],
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    "native_motion_probe": {
+      "status": "pending",
+      "target_editor_version": null,
+      "fps": null,
+      "evidence": [],
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    "native_full_visual": {
+      "status": "pending",
+      "evidence": [],
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    "native_audio_perceptual": {
+      "status": "pending",
+      "evidence": [],
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    "native_export": {
+      "status": "pending",
+      "evidence": [],
+      "reviewed_by": null,
+      "reviewed_at": null
+    },
+    "import": {
+      "status": "pending",
+      "receipt": null,
+      "installed_draft_id": null
+    }
+  },
+  "environment": {
+    "local_config": "local_environment.json",
+    "secrets_included": false,
+    "credentials_owned_by_current_user": null
+  },
+  "blockers": [],
+  "last_updated": null,
+  "path_policy": "Project artifact paths are relative to the project root; machine paths and credential configuration stay in local_environment.json and are excluded from shared packages.",
+  "project_instance_id": null,
+  "run_id": null
+}

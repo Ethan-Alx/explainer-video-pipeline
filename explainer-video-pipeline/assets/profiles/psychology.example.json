@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "profile_id": "psychology-example-channel",
+  "status": "pending_current_user_configuration",
+  "channel_name": null,
+  "audience": {
+    "language": null,
+    "voiceover_language": null,
+    "age_group": null,
+    "geography": null
+  },
+  "subjects": [
+    "psychology_education"
+  ],
+  "identity": {
+    "mode": "undecided",
+    "status": "pending",
+    "reference_file": null,
+    "reference_sha256": null,
+    "actual_reference_binding_required_when_fixed_ip_present": true
+  },
+  "visual_direction": {
+    "status": "pending",
+    "style": null,
+    "reference_files": [],
+    "accepted_samples": [],
+    "example_use": "Use your own approved references; repository examples are technical demonstrations only."
+  },
+  "output_defaults": {
+    "width": null,
+    "height": null,
+    "fps": null,
+    "editable_draft": null
+  },
+  "providers": {
+    "image_provider": null,
+    "current_user_login_configured": false,
+    "api_configured": false,
+    "credentials": null,
+    "spending_authorization": "pending",
+    "reuse_other_users_credentials": false
+  },
+  "content_policy": {
+    "distinguish_evidence_correlation_causation_metaphor": true,
+    "no_invented_brain_scan_or_research_result": true,
+    "health_claims_require_topic_specific_source_review": true,
+    "frozen_source_changes_require_explicit_revision": true
+  },
+  "quality_baseline": {
+    "id": null,
+    "status": "pending_own_reference_review",
+    "this_channels_samples_approved": false,
+    "production_requirements_version": "7.3.0"
+  },
+  "next_decisions": [
+    "Set channel audience and language",
+    "Bind this channel's existing approved identity/style or decide no fixed presenter",
+    "Select source files and output settings",
+    "Configure own tools and test current-machine native playback"
+  ],
+  "production_preferences": {
+    "production_policy": {
+      "version": "7.2",
+      "preset_id": "explainer_v72",
+      "channel_id": "psychology-example-channel",
+      "ordinary_still_target_s": 8,
+      "ordinary_still_review_limit_s": 10,
+      "flow_video_limit": 5,
+      "flow_paid_submission_budget": 5,
+      "motion": {
+        "minimum_scale_relative_delta": 0.2,
+        "minimum_translation_canvas_fraction": 0.08
+      },
+      "labels": {
+        "minimum_font_px_at_1080p": 40,
+        "minimum_contrast_ratio": 4.5
+      },
+      "flow_submission_ledger": "generation/flow_video_submissions.json"
+    },
+    "subtitle_policy": "Preserve the owner-selected subtitle setting; explicitly configure render_narration_subtitles when needed.",
+    "personal_brand_and_identity_preserved": true
+  }
+}

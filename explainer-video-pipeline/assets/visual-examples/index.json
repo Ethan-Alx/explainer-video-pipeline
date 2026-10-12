@@ -1,0 +1,15 @@
+{
+  "scope": "Public technical demonstration only; no channel assets or approved production media.",
+  "examples": [
+    {
+      "file": "generic-layout.svg",
+      "kind": "editable_layout_demonstration",
+      "approved_art_direction": false
+    }
+  ],
+  "continuous_sample": {
+    "generator": "../../tests/portable_smoke.py",
+    "status": "generated_locally_not_included"
+  },
+  "required_production_reference": "Use the current owner-approved images and continuous previews."
+}
